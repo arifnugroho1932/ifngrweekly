@@ -1,0 +1,105 @@
+:root {
+  --bg: #0f172a;
+  --card: #111c36;
+  --text: #e5e7eb;
+  --muted: #cbd5e1;
+  --border: rgba(255, 255, 255, .16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+
+
+h1 {
+  margin: 18px 16px 6px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.profile {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px 28px;
+  max-width: 900px;
+}
+
+.profile h2,
+.profile h3 {
+  margin-left: 0;
+}
+
+.profile p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.profile ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--border);
+  margin: 16px 16px;
+}
+
+table[border] {
+  width: calc(100% - 32px);
+  margin: 0 16px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--card);
+  border: 1px solid var(--border) !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+table[border] td {
+  padding: 12px 14px;
+  border-color: var(--border) !important;
+}
+
+a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body>hr+h1 {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  hr {
+    margin: 12px 12px;
+  }
+
+  table[border] {
+    width: calc(100% - 24px);
+    margin: 0 12px;
+  }
+
+  table[border] td {
+    padding: 10px 10px;
+  }
+}

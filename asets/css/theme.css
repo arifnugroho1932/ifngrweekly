@@ -1,0 +1,59 @@
+:root{
+  --bg-0: #070a18;
+  --bg-1: #0b1220;
+  --text: #e8eefc;
+  --muted: #b9c3e6;
+  --card: rgba(17,27,51,.72);
+  --border: rgba(255,255,255,.16);
+  --accent: #4f7cff;
+  --accent-2: #22c55e;
+  --accent-3: #f59e0b;
+  --radius: 14px;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(900px 380px at 10% 0%, rgba(79,124,255,.35), transparent 60%),
+    radial-gradient(700px 320px at 90% 10%, rgba(34,197,94,.20), transparent 55%),
+    radial-gradient(650px 300px at 50% 100%, rgba(245,158,11,.12), transparent 60%),
+    linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 55%, var(--bg-0) 100%);
+}
+
+hr{
+  border: 0;
+  height: 1px;
+  background: var(--border);
+  margin: 14px 16px;
+}
+
+a{ color: var(--accent); text-decoration: none; font-weight: 700; }
+
+a:hover{ text-decoration: underline; }
+
+table[border]{
+  width: calc(100% - 32px);
+  margin: 0 16px 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--card);
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+table[border] td{
+  padding: 10px 14px;
+  border-color: var(--border) !important;
+  background: rgba(17,27,51,.65);
+}
+
+@media (max-width: 600px){
+  table[border]{ width: calc(100% - 24px); margin: 0 12px 10px; }
+  table[border] td{ padding: 10px 10px; }
+}
+
