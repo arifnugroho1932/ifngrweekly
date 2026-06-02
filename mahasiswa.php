@@ -11,16 +11,16 @@
 
     <table border="1" cellspacing="" cellpadding="1"> 
         <tr>
-            <td><a href="index.html">HOME</a></td>
-            <td><a href="Profile.html">Profile</a></td>
-            <td><a href="Contact.html">Contact</a></td>
-            <td><a href="Mahasiswa.html">Mahasiswa</a></td>
+            <td><a href="index.php">HOME</a></td>
+            <td><a href="Profile.php">Profile</a></td>
+            <td><a href="Contact.php">Contact</a></td>
+            <td><a href="Mahasiswa.php">Mahasiswa</a></td>
         </tr>
     </table>
     <br>
     <hr/>
     <h2>Data Mahasiswa</h2>
-    <a href="tambahdata.html">
+    <a href="tambahdata.php">
         <button>Tambah Data</button>
     </a>
     <table border="1" cellpadding="10">

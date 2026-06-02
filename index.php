@@ -12,10 +12,10 @@
         <h1>INFORMATIKA 2026</h1>
 
         <table border="1" cellspacing="1" cellpadding="1"> 
-            <td><a href="index.html">HOME</a></td>
-            <td><a href="Profile.html">Profile</a></td>
-            <td><a href="Contact.html">Contact</a></td>
-            <td><a href="Mahasiswa.html">Mahasiswa</a></td>
+            <td><a href="index.php">HOME</a></td>
+            <td><a href="Profile.php">Profile</a></td>
+            <td><a href="Contact.php">Contact</a></td>
+            <td><a href="Mahasiswa.php">Mahasiswa</a></td>
         </table>
         <hr/>
         <h3>Sambutan Kaprodi</h3>
@@ -39,7 +39,7 @@
             <li>Best Artikel</li>
         </ul>
         <!-- Internal Source -->
-        <a href="profile.html">Profile</a>
+        <a href="profile.php">Profile</a>
 
 
         <!-- Internal Source -->

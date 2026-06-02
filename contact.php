@@ -11,10 +11,10 @@
 
     <table border="1" cellspacing="1" cellpadding="1"> 
         <tr>
-            <td><a href="index.html">HOME</a></td>
-            <td><a href="Profile.html">Profile</a></td>
-            <td><a href="Contact.html">Contact</a></td>
-            <td><a href="Mahasiswa.html">Mahasiswa</a></td>
+            <td><a href="index.php">HOME</a></td>
+            <td><a href="Profile.php">Profile</a></td>
+            <td><a href="Contact.php">Contact</a></td>
+            <td><a href="Mahasiswa.php">Mahasiswa</a></td>
         </tr>
     </table>
 
@@ -25,7 +25,7 @@
         <h2>Hubungi Kami</h2>
         <p>Jika ada pertanyaan atau masukan terkait program studi Informatika 2026, silakan isi form berikut:</p>
 
-        <form action="mahasiswa.html" method="post">
+        <form action="mahasiswa.php" method="post">
             <label for="nama">Nama:</label><br>
             <input type="text" id="nama" name="nama" required><br><br>
 
