@@ -1,3 +1,9 @@
+<?php
+    require "fungsi.php";
+    $qmhs = "SELECT * FROM mahasiswa";
+    $mahasiswas = tampildata($qmhs);
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +12,7 @@
     <title>Data Mahasiswa | Informatika 2026</title>
 </head>
 <body>
-    <link rel="stylesheet" href="asets/css/style.css"> 
+    
     <h1>INFORMATIKA 2026</h1>
 
     <table border="1" cellspacing="" cellpadding="1"> 
@@ -25,24 +31,37 @@
     </a>
     <table border="1" cellpadding="10">
         <tr>
-            <th rowspan="2">No</th>
-            <th rowspan="2">Nama</th>
-            <th rowspan="2">Foto</th>
-            <th colspan="3">Nilai</th>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Nim</th>
+            <th>Jurusan</th>
+            <th>Email</th>
+            <Th>No. HP</Th>
+            <th>foto</th>
+            <th>Aksi</th>
         </tr>
+        <?php
+        $i = 1;
+            foreach($mahasiswas as $mhs)
+            {
+        ?>
         <tr>
-            <th>UTS</th>
-            <th>UAS</th>
-            <th>Tugas</th>
+            <td align="center"><?php echo $i ?></td>
+            <td><?php echo $mhs["nama"] ?></td>
+            <td><?php echo $mhs["nim"] ?></td>
+            <td><?php echo $mhs["jurusan"] ?></td>
+            <td><?php echo $mhs["email"] ?></td>
+            <td><?php echo $mhs["no_hp"] ?></td>
+            <td><img src="asets/images/<?= $mhs['foto']?> "alt="foto" width="60px"></td>
+            <td>
+                <a href="editdata.php"></button>Edit</button></a>
+                <a href="deletedata.php"><button>Hapus</button></a>
+            </td>
         </tr>
-        <tr>
-            <td align="center">1</td>
-            <td>Arif Nugroho</td>
-            <td><img src="asets/images/Unimus.png" alt="foto" width="60px"></td>
-            <td align="center">90</td>
-            <td align="center">85</td>
-            <td align="center">95</td>
-        </tr>
+        <?php
+        $i++;
+            }
+        ?>
         <tr>
             <td align="center">2</td>
             <td>Monkey D Luffy</td>

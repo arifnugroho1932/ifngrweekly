@@ -18,21 +18,30 @@
                 <td><label for="nama">Nama:</label></td>
                 <td><input type="text" id="nama" name="nama"></td>
             </tr>
+
+            <tr>
+                <td><label for="nim">Nim:</label></td>
+                <td><input type="number" id="nim" name="nim"></td>
+            </tr>
+
+            <tr>
+                <td><label for="jurusan">Jurusan:</label></td>
+                <td><input type="text" id="jurusan" name="jurusan"></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="text" id="email" name="email"></td>
+            </tr>
+
+            <tr>
+                <td><label for="nohp">No. HP:</label></td>
+                <td><input type="number" id="nohp" name="no_hp"></td>
+            </tr>
+
             <tr>
                 <td><label for="foto">Foto:</label></td>
                 <td><input type="file" id="foto" name="foto"></td>
-            </tr>
-            <tr>
-                <td><label for="uts">Nilai UTS:</label></td>
-                <td><input type="number" id="uts" name="Nilai UTS"></td>
-            </tr>
-            <tr>
-                <td><label for="uas">Nilai UAS:</label></td>
-                <td><input type="number" id="uas" name="Nilai UAS"></td>
-            </tr>
-            <tr>
-                <td><label for="tugas">Nilai Tugas:</label></td>
-                <td><input type="number" id="tugas" name="Nilai Tugas"></td>
             </tr>
         </table>
         <br>
