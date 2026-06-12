@@ -55,29 +55,15 @@
             <td><img src="asets/images/<?= $mhs['foto']?> "alt="foto" width="60px"></td>
             <td>
                 <a href="editdata.php"></button>Edit</button></a>
-                <a href="deletedata.php"><button>Hapus</button></a>
+                <a href="hapusdata.php?id=<?= $mhs['id']; ?>"
+                onclick ="return confirm('yakin?')";
+                ><button>Hapus</button></a>
             </td>
         </tr>
         <?php
         $i++;
             }
         ?>
-        <tr>
-            <td align="center">2</td>
-            <td>Monkey D Luffy</td>
-            <td><img src="asets/images/luffy.jpg" alt="foto" width="60px"></td>
-            <td align="center">80</td>
-            <td align="center">85</td>
-            <td align="center">95</td>
-        </tr>
-        <tr>
-            <td align="center">3</td>
-            <td>Zoro</td>
-            <td><img src="asets/images/zoro.jfif" alt="foto" width="60px"></td>
-            <td align="center">77</td>
-            <td align="center">85</td>
-            <td align="center">95</td>
-        </tr>
 
     </table>
     <br>

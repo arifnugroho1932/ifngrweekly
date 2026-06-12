@@ -1,4 +1,60 @@
+<?php
 
+    require "fungsi.php";
+
+    if(isset($_POST["submit"]))
+
+    {
+
+        if(tambahdata($_POST) > 0)
+        {
+            echo "<script>
+                alert ('Data Berhasil Ditambahkan!');
+                window.location.href='mahasiswa.php';
+                </script>
+                ";
+        }
+
+        else
+        {
+            echo "<script>
+            alert ('Data Gagal Ditambahkan!');
+            window.location.href='mahasiswa.php';
+            </script>
+            ";
+        }
+
+
+
+
+
+        if(mysqli_affected_rows($koneksi) > 0)
+        {
+            echo "<script>
+                alert ('Data Berhasil Ditambahkan!');
+                window.location.href='mahasiswa.php';
+                </script>
+                ";
+        }
+
+        else
+        {
+            echo "<script>
+            alert ('Data Gagal Ditambahkan!');
+            window.location.href='mahasiswa.php';
+            </script>
+            ";
+        }
+
+
+
+    }
+
+
+
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +68,7 @@
 
 <body>
     <h2>Tambah Data Mahasiswa</h2>
-    <form action="mahasiswa.php" method="post">
+    <form action="" method="post"> 
         <table cellpadding="5px">
             <tr>
                 <td><label for="nama">Nama:</label></td>
@@ -41,11 +97,11 @@
 
             <tr>
                 <td><label for="foto">Foto:</label></td>
-                <td><input type="file" id="foto" name="foto"></td>
+                <td><input type="text" id="foto" name="foto"></td>
             </tr>
         </table>
         <br>
-        <button type="submit">Simpan dan Tambahkan Data</button>
+        <button type="submit" name="submit"> tambah data </button>
     </form>
 
     <form>
