@@ -2,14 +2,21 @@
 
     require "fungsi.php";
 
-    if(isset($_POST["submit"]))
+    $id = $_GET['id'];
+
+    $query = "SELECT * FROM mahasiswa WHERE id=$id";
+
+    $mhs=tampildata($query)[0];
+
+
+    if(isset($_POST["kirim"]))
 
     {
 
-        if(tambahdata($_POST, $_FILES["foto"]) > 0)
+        if(ubahdata($_POST,$id) > 0)
         {
             echo "<script>
-                alert ('Data Berhasil Ditambahkan!');
+                alert ('Data Berhasil Diubah!');
                 window.location.href='mahasiswa.php';
                 </script>
                 ";
@@ -18,7 +25,7 @@
         else
         {
             echo "<script>
-            alert ('Data Gagal Ditambahkan!');
+            alert ('Data Gagal Diubah!');
             window.location.href='mahasiswa.php';
             </script>
             ";
@@ -31,7 +38,7 @@
         if(mysqli_affected_rows($koneksi) > 0)
         {
             echo "<script>
-                alert ('Data Berhasil Ditambahkan!');
+                alert ('Data Berhasil Diubah!');
                 window.location.href='mahasiswa.php';
                 </script>
                 ";
@@ -40,7 +47,7 @@
         else
         {
             echo "<script>
-            alert ('Data Gagal Ditambahkan!');
+            alert ('Data Gagal Diubah!');
             window.location.href='mahasiswa.php';
             </script>
             ";
@@ -62,46 +69,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data Mahasiswa</title>
+    <title>Ubah Data Mahasiswa</title>
 </head>
     <link rel="stylesheet" href="asets/css/style.css">
 
 <body>
-    <h2>Tambah Data Mahasiswa</h2>
-    <form action="" method="post" enctype="multipart/form-data"> 
+    <h2>Ubah Data Mahasiswa</h2>
+    <form action="" method="post"> 
         <table cellpadding="5px">
             <tr>
                 <td><label for="nama">Nama:</label></td>
-                <td><input type="text" id="nama" name="nama"></td>
+                <td><input type="text" id="nama" name="nama" require
+                value="<?= $mhs ["nama"]?>"></td>
             </tr>
 
             <tr>
                 <td><label for="nim">Nim:</label></td>
-                <td><input type="number" id="nim" name="nim"></td>
+                <td><input type="number" id="nim" name="nim" require
+                value = "<?= $mhs ["nim"]?>"></td>
             </tr>
 
             <tr>
                 <td><label for="jurusan">Jurusan:</label></td>
-                <td><input type="text" id="jurusan" name="jurusan"></td>
+                <td><input type="text" id="jurusan" name="jurusan" require
+                value = "<?= $mhs ["jurusan"]?>"></td>
             </tr>
 
             <tr>
                 <td><label for="email">Email:</label></td>
-                <td><input type="text" id="email" name="email"></td>
+                <td><input type="text" id="email" name="email" require
+                value = "<?= $mhs ["email"]?>"></td>
             </tr>
 
             <tr>
                 <td><label for="nohp">No. HP:</label></td>
-                <td><input type="number" id="nohp" name="no_hp"></td>
+                <td><input type="number" id="nohp" name="no_hp" require
+                value = "<?= $mhs ["no_hp"]?>"></td>
             </tr>
 
             <tr>
                 <td><label for="foto">Foto:</label></td>
-                <td><input type="file" id="foto" name="foto"></td>
+                <td><input type="file" id="foto" name="foto" require
+                value = "<?= $mhs ["foto"]?>"></td>
             </tr>
         </table>
         <br>
-        <button type="submit" name="submit"> tambah data </button>
+        <button type="submit" name="submit"> ubah data </button>
     </form>
 
 </body>
