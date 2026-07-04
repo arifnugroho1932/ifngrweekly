@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Mahasiswa | Informatika 2026</title>
 </head>
+    <link rel="stylesheet" href="asets/css/style.css">
 <body>
     
     <h1>INFORMATIKA 2026</h1>
@@ -21,6 +22,7 @@
             <td><a href="Profile.php">Profile</a></td>
             <td><a href="Contact.php">Contact</a></td>
             <td><a href="Mahasiswa.php">Mahasiswa</a></td>
+            <td><a href="register.php">Register</a></td>
         </tr>
     </table>
     <br>

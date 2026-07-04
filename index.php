@@ -6,7 +6,7 @@
             INFORMATIKA 2026
         </title>
         <link rel="stylesheet" href="asets/css/style.css">
-    </head>
+</head>
 
     <body>
         <h1>INFORMATIKA 2026</h1>
@@ -16,6 +16,7 @@
             <td><a href="Profile.php">Profile</a></td>
             <td><a href="Contact.php">Contact</a></td>
             <td><a href="Mahasiswa.php">Mahasiswa</a></td>
+            <td><a href="login.php">Login</a></td>
         </table>
         <hr/>
         <h3>Sambutan Kaprodi</h3>

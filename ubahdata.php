@@ -70,8 +70,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ubah Data Mahasiswa</title>
-</head>
     <link rel="stylesheet" href="asets/css/style.css">
+</head>
 
 <body>
     <h2>Ubah Data Mahasiswa</h2>
