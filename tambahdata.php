@@ -1,5 +1,12 @@
 <?php
 
+    session_start();
+
+    if (!isset($_SESSION["login"])) {
+        header("Location: login.php");
+        exit;
+    }
+
     require "fungsi.php";
 
     if(isset($_POST["submit"]))
@@ -68,6 +75,8 @@
 
 <body>
     <h2>Tambah Data Mahasiswa</h2>
+    <p><a href="logout.php">Logout</a></p>
+
     <form action="" method="post" enctype="multipart/form-data"> 
         <table cellpadding="5px">
             <tr>

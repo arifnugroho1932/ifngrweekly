@@ -7,6 +7,7 @@ if (isset($_SESSION["login"])) {
     exit;
 }
 
+
 $error = false;
 
 if (isset($_POST["login"])) {
@@ -30,7 +31,17 @@ if (isset($_POST["login"])) {
 </head>
 <link rel="stylesheet" href="asets/css/style.css">
 <body>
-    <h1>Login User</h1>
+<table border="1" cellspacing="1" cellpadding="1"> 
+        <tr>
+            <td><a href="index.php">HOME</a></td>
+            <td><a href="Profile.php">Profile</a></td>
+            <td><a href="Contact.php">Contact</a></td>
+            <td><a href="Mahasiswa.php">Mahasiswa</a></td>
+            <td><a href="login.php">Login</a></td>
+        </tr>
+    </table>
+
+    <hr/>
 
     <?php if ($error): ?>
         <p style="color: red;">Username atau password salah.</p>
@@ -48,15 +59,5 @@ if (isset($_POST["login"])) {
 
     <p>Belum punya akun? <a href="register.php">Register</a></p>
 
-    <hr>
-    <table border="1" cellspacing="0" cellpadding="5">
-        <tr>
-            <td><a href="index.php">Home</a></td>
-            <td><a href="profile.php">Profile</a></td>
-            <td><a href="contact.php">Contact</a></td>
-            <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
-            <td><a href="register.php">Register</a></td>
-        </tr>
-    </table>
 </body>
 </html>

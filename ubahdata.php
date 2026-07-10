@@ -1,5 +1,12 @@
 <?php
 
+    session_start();
+
+    if (!isset($_SESSION["login"])) {
+        header("Location: login.php");
+        exit;
+    }
+
     require "fungsi.php";
 
     $id = $_GET['id'];
@@ -75,6 +82,8 @@
 
 <body>
     <h2>Ubah Data Mahasiswa</h2>
+    <p><a href="logout.php">Logout</a></p>
+
     <form action="" method="post"> 
         <table cellpadding="5px">
             <tr>

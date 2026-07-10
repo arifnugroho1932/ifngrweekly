@@ -35,8 +35,17 @@
 <link rel="stylesheet" href="asets/css/style.css">
 </head>
 <body>
-        <h1>Register User</h1>
-        <hr>
+<table border="1" cellspacing="1" cellpadding="1"> 
+        <tr>
+            <td><a href="index.php">HOME</a></td>
+            <td><a href="Profile.php">Profile</a></td>
+            <td><a href="Contact.php">Contact</a></td>
+            <td><a href="Mahasiswa.php">Mahasiswa</a></td>
+            <td><a href="login.php">Login</a></td>
+        </tr>
+    </table>
+
+    <hr/>
         <form action="" method="post">
             <label>username</label><br>
             <input type="text" name="username" required><br><br>
@@ -46,16 +55,5 @@
             <input type="password" name="password2"><br><br>
             <button type="submit" name="register">Register</button>
         </form>
-        <br>
-        <table border="1" cellspacing="0" cellpadding="5">
-            <tr>
-                <td><a href="index.php">Home</a></td>
-                <td><a href="profile.php">Profile</a></td>
-                <td><a href="contact.php">Contact</a></td>
-                <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
-                <td><a href="register.php">Register</a></td>`
-            </tr>
-        </table>
-        <hr/>
     </body>
 </html>

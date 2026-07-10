@@ -91,29 +91,44 @@ function ubahdata($data, $id)
 
 
 function register($data)
-    { 
-        global $koneksi;
+{
+    global $koneksi;
 
-        $username = stripslashes($data["username"]);
-        $password1 = mysqli_real_escape_string($koneksi, $data["password1"]);
-        $password2 = mysqli_real_escape_string($koneksi, $data["password2"]);
+    $username = strtolower(stripslashes($data["username"]));
+    $password1 = mysqli_real_escape_string($koneksi, $data["password1"]);
+    $password2 = mysqli_real_escape_string($koneksi, $data["password2"]);
 
-        if($password1 != $password2)
-            {   
-                echo "<script>
-                        alert('konfirmasi password tidak sesuai');
-                    </script>";
-                return false;
-            }
-        //// enkripsi password
-        $password_hash = password_hash($password1, PASSWORD_DEFAULT);
+    // Cek username sudah ada atau belum
+    $cek = mysqli_query($koneksi, "SELECT * FROM users WHERE username='$username'");
 
-        $query = "INSERT INTO user (username, password) VALUES
-        ('$username', '$password_hash')";
-
-        mysqli_query($koneksi, $query);
-        return mysqli_affected_rows($koneksi);
+    if(mysqli_num_rows($cek) > 0)
+    {
+        echo "<script>
+                alert('Username sudah digunakan');
+              </script>";
+        return false;
     }
+
+    // Cek konfirmasi password
+    if($password1 != $password2)
+    {
+        echo "<script>
+                alert('Konfirmasi password tidak sesuai');
+              </script>";
+        return false;
+    }
+
+    // Enkripsi password
+    $password_hash = password_hash($password1, PASSWORD_DEFAULT);
+
+    // Simpan ke database
+    $query = "INSERT INTO users(username, password)
+              VALUES('$username', '$password_hash')";
+
+    mysqli_query($koneksi, $query);
+
+    return mysqli_affected_rows($koneksi);
+}
 
 function login($data)
 {
@@ -122,7 +137,7 @@ function login($data)
     $username = mysqli_real_escape_string($koneksi, strtolower($data["username"]));
     $password = mysqli_real_escape_string($koneksi, $data["password"]);
 
-    $result = mysqli_query($koneksi, "SELECT * FROM user WHERE username = '$username'");
+    $result = mysqli_query($koneksi, "SELECT * FROM users WHERE username = '$username'");
 
     if (mysqli_num_rows($result) === 1) {
         $row = mysqli_fetch_assoc($result);

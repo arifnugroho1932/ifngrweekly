@@ -1,4 +1,11 @@
 <?php
+    session_start();
+
+    if (!isset($_SESSION["login"])) {
+        header("Location: login.php");
+        exit;
+    }
+
     require "fungsi.php";
     $qmhs = "SELECT * FROM mahasiswa";
     $mahasiswas = tampildata($qmhs);
@@ -22,7 +29,8 @@
             <td><a href="Profile.php">Profile</a></td>
             <td><a href="Contact.php">Contact</a></td>
             <td><a href="Mahasiswa.php">Mahasiswa</a></td>
-            <td><a href="register.php">Register</a></td>
+            <td><a href="logout.php">Logout</a></td>
+
         </tr>
     </table>
     <br>
